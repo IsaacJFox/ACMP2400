@@ -2,7 +2,7 @@ name: Test Dockerfile
 on:
   workflow_dispatch
 permissions:
-    contents: read
+  contents: read
 jobs:
   build-and-curl:
     runs-on: ubuntu-latest
