@@ -1,6 +1,7 @@
 name: Test Dockerfile
 on:
-  workflow_dispatch
+  workflow_dispatch:
+
 permissions:
   contents: read
 jobs:
