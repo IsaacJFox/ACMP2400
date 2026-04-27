@@ -15,7 +15,7 @@ jobs:
 
       - name: docker_build
         run: |
-          docker build -t pipeline-test -f final_app/Dockerfile .
+          docker build -t pipeline-test .
 
       - name: docker_run
         env:
