@@ -1,6 +1,6 @@
 name: 'Terraformer'
 description: 'Executes terraform plan and apply steps'
-author: 'sahplaM@'
+author: 'IsaacJFox@'
 inputs:
   ARM_CLIENT_ID:
     description: 'The Azure Client ID'
