@@ -17,9 +17,9 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_container_registry" "jzamora-acr" {
-  name = "acrjzamoraacmp2400"
-  resource_group_name = "rg-jzamora-raya"
+resource "azurerm_container_registry" "isaacfox-acr" {
+  name = "isaacfoxacmp2400"
+  resource_group_name = "rg-isaacfox"
   location = "Central US"
   sku = "Basic"
   admin_enabled = false
