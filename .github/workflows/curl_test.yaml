@@ -61,14 +61,14 @@ jobs:
     - name: acr_login
       uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121
       with:
-        registry: acrmattallen889acmp2400.azurecr.io
+        registry: acrIsaacJFoxacmp2400.azurecr.io
         username: ${{ secrets.ARM_CLIENT_ID }}
         password: ${{ secrets.ARM_CLIENT_SECRET }}
     - name: docker_build_tag_push
       run: |
         docker build -t application-final .
-        docker tag application-final acrmattallen889acmp2400.azurecr.io/final
-        docker push acrmattallen889acmp2400.azurecr.io/final
+        docker tag application-final acrIsaacJFoxacmp2400.azurecr.io/final
+        docker push acrIsaacJFoxacmp2400.azurecr.io/final
 
   terraform-stage-2:
     needs: build-tag-push
