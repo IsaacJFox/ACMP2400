@@ -55,8 +55,8 @@ resource "azurerm_container_group" "ifox-aci" {
 
     image_registry_credential {
       server = "acrifoxacmp2400.azurecr.io"
-      username = var .ARM_CLIENT_ID
-      password = var .ARM_CLIENT_SECRET
+      username = var.ARM_CLIENT_ID
+      password = var.ARM_CLIENT_SECRET
 
       }
     }
