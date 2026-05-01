@@ -21,25 +21,25 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_container_registry" "isaacfox-acr" {
-  name = "isaacfoxacmp2400"
-  resource_group_name = "rg-isaacfox"
+resource "azurerm_container_registry" "ifox-acr" {
+  name = "ifoxacmp2400"
+  resource_group_name = "rg-ifox"
   location = "Central US"
   sku = "Basic"
   admin_enabled = false
 }
 
-resource "azurerm_container_group" "isaacfox-aci" {
-  name                = "acmp-isaacfox-aci"
+resource "azurerm_container_group" "ifox-aci" {
+  name                = "acmp-ifox-aci"
   location            = "Central US"
-  resource_group_name = "rg-isaacfox"
+  resource_group_name = "rg-ifox"
   ip_address_type     = "Public"
-  dns_name_label      = "acmp-isaacfox-instance"
+  dns_name_label      = "acmp-ifox-instance"
   os_type             = "Linux"
 
   container {
     name   = "final-app"
-    image  = "isaacfoxacmp2400.azurecr.io/final:latest"
+    image  = "ifoxacmp2400.azurecr.io/final:latest"
     cpu    = "0.5"
     memory = "1.5"
 
@@ -54,7 +54,7 @@ resource "azurerm_container_group" "isaacfox-aci" {
   }
 
     image_registry_credential {
-      server = "isaacfoxacmp2400.azurecr.io"
+      server = "ifoxacmp2400.azurecr.io"
       username = var .ARM_CLIENT_ID
       password = var .ARM_CLIENT_SECRET
 
