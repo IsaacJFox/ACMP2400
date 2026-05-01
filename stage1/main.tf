@@ -18,7 +18,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_container_registry" "ifox-acr" {
-  name = "ifoxacmp2400"
+  name = "acrifoxacmp2400"
   resource_group_name = "rg-ifox"
   location = "Central US"
   sku = "Basic"
