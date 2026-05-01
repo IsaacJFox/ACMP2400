@@ -17,9 +17,9 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_container_registry" "isaacfox-acr" {
-  name = "isaacfoxacmp2400"
-  resource_group_name = "rg-isaacfox"
+resource "azurerm_container_registry" "ifox-acr" {
+  name = "ifoxacmp2400"
+  resource_group_name = "rg-ifox"
   location = "Central US"
   sku = "Basic"
   admin_enabled = false
