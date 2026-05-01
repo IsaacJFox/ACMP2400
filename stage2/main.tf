@@ -22,7 +22,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_container_registry" "ifox-acr" {
-  name = "ifoxacmp2400"
+  name = "acrifoxacmp2400"
   resource_group_name = "rg-ifox"
   location = "Central US"
   sku = "Basic"
@@ -39,7 +39,7 @@ resource "azurerm_container_group" "ifox-aci" {
 
   container {
     name   = "final-app"
-    image  = "ifoxacmp2400.azurecr.io/final:latest"
+    image  = "acrifoxacmp2400.azurecr.io/final:latest"
     cpu    = "0.5"
     memory = "1.5"
 
@@ -54,7 +54,7 @@ resource "azurerm_container_group" "ifox-aci" {
   }
 
     image_registry_credential {
-      server = "ifoxacmp2400.azurecr.io"
+      server = "acrifoxacmp2400.azurecr.io"
       username = var .ARM_CLIENT_ID
       password = var .ARM_CLIENT_SECRET
 
