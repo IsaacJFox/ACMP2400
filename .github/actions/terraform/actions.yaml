@@ -1,0 +1,28 @@
+name: 'Terraformer'
+description: 'Executes terraform plan and apply steps'
+author: 'IsaacJFox@'
+inputs:
+  ARM_CLIENT_ID:
+    description: 'The Azure Client ID'
+    required: true
+  ARM_CLIENT_SECRET:
+    description: 'The Azure Client secret'
+    required: true
+  ARM_SUBSCRIPTION_ID:
+    description: 'The Azure sub'
+    required: true
+  ARM_TENANT_ID:
+    description: 'The Azure tenant ID'
+    required: true
+  STATE_KEY:
+    description: 'The unique key for state lookup'
+    required: true
+  TF_STAGE:
+    description: 'The TF deployment stage'
+    required: true
+  DJANGO_SECRET_KEY_PROD:
+    description: 'The secret key for django to startup'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
