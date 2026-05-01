@@ -49,7 +49,7 @@ jobs:
         ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-        STATE_KEY: 'isaacfox'
+        STATE_KEY: 'ifox'
         TF_STAGE: 'stage1'
 
   build-tag-push:
@@ -83,7 +83,7 @@ jobs:
         ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
         ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-        STATE_KEY: 'isaacfox'
+        STATE_KEY: 'ifox'
         TF_STAGE: 'stage2'
         DJANGO_SECRET_KEY_PROD: ${{ secrets.DJANGO_SECRET_KEY_PROD }}
 
@@ -114,5 +114,5 @@ jobs:
         ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
         ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-        STATE_KEY: 'isaacfox'
+        STATE_KEY: 'ifox'
         TF_STAGE: 'stage3'
